@@ -1,0 +1,997 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Gravitas+One&family=Odor+Mean+Chey&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    z-index: 1;
+}
+
+body{
+    max-width: 100%;
+    min-height: 100vh;
+    background: #ece3c5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6) url("../Pictures/bg.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.signup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 1;
+    animation: scrollup .5s ease-in-out;
+}
+
+.signin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 1;
+    animation: scrollup .5s ease-in-out;
+}
+
+@keyframes scrollup{
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.signin-form{
+    background: transparent;
+    padding-top: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 3px #000;
+}
+
+form #email{
+    font-size: 13px;
+    color: #971919;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+form #username{
+    font-size: 13px;
+    color: #971919;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+form #pass{
+    width: 200px;
+    font-size: 13px;
+    color: #971919;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+form #confirm{
+    font-size: 13px;
+    color: #971919;
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    translate: -50% 0%;
+}
+
+.signin-form h1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+    padding-bottom: 20px;
+    color: #524d4d;
+}
+
+form .inner{
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+form a{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+form a:hover{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: rgb(146, 4, 39);
+}
+
+.signin-form form{
+    background: #fff;
+    border-radius: 0px 0px 10px 10px;
+}
+
+label{
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+}
+
+.exit svg{
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+.inner input{
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 1px #000;
+    border: none;
+    width: 100%;
+}
+
+.inner div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn input{
+    padding: 5px;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 0px 0px #000;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.btn input:hover{
+    color: rgb(102, 66, 5);
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 0px 0px #000;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.btn input:active{
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 2px 2px 0px 0px #000;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.signup-form form{
+    width: 250px;
+    background: #fff;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 3px #000;
+}
+
+.signup-form form h1{
+    color: #000;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+form .signin-fail{
+    
+    font-size: 13px;
+    color: #971919;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    translate: -50% 0;
+}
+
+form .inner-signup{
+    display: flex;
+    flex-direction: column;
+}
+
+form .btn{
+    display: flex;
+    justify-content: center;
+}
+
+.inner-signup input{
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 1px #000;
+    border: none;
+    width: 100%;
+}
+
+.inner-signup .btn input{
+    padding: 5px;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 0px 0px #000;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+.inner-signup .btn input:active{
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 2px 2px 0px 0px #000;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+form p{
+    display: flex;
+    justify-content: center;
+
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-top: 25%;
+    padding-bottom: 6%;
+}
+
+.home a, h5, h1{
+    color: #fff;
+    text-decoration: none;
+}
+
+.home h5{
+    font-size: 20px;
+}
+
+.home h1{
+    font-size: 40px;
+}
+
+.readjoin{
+    display: flex;
+    flex-direction: row;
+}
+
+.readjoin a:hover{
+    color: orange;
+    text-shadow: 2px 2px 0px rgb(94, 94, 6);
+    cursor: pointer;
+}
+
+.readjoin svg{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.readjoin div{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+}
+
+button{
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 2px 2px 2px rgb(155, 124, 39);
+}
+
+button:hover{
+    color: #fff;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(155, 124, 39);
+    box-shadow: 0px 2px 2px 2px #000;
+}
+
+button:active{
+    color: #fff;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #000;
+    box-shadow: 0px 2px 2px 0px rgb(255, 255, 255);
+}
+
+.scroller{
+    display: flex;
+    justify-content: center;
+    animation: direct 0.3s infinite;
+}
+
+@keyframes direct{
+    0%{
+        transform: translateY(0) ;
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.scroller:hover{
+    display: flex;
+    justify-content: center;
+}
+
+.rules{
+    padding-top: 30px;
+    background-color: #ece3c5;
+    width: 100%;
+    height: 100vh;
+}
+
+.rule1{
+    padding-top: 6%;
+    display: flex;
+    justify-content: center;
+}
+
+.rule1 h1, .rule2 h1, .rule3 h1{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: "Odor Mean Chey", serif;
+    font-weight: bolder;
+    font-style: normal;
+    color: #524d4d;
+}
+
+.rule1 p{
+    display: flex;
+    justify-content: center;
+    color: #524d4d;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.rule2, .rule3{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.rule2 p, .rule3 p{
+    color: #524d4d;
+}
+
+.prize{
+    background-color: #ece3c5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+}
+
+.prize h1{
+    font-size: 50px;
+    padding-top: 50px;
+    color: #524d4d;
+}
+
+.prizes{
+    background: #e77e7e3b;
+    padding: 10px;
+    padding-right: 50%;
+}
+
+.prizes h2{
+    color: #524d4d;
+    margin: 40px;
+}
+
+.guest{
+    background: #ece3c5;
+    height: 100vh;
+    width: 100%;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.guest-title h1{
+    font-size: 50px;
+    padding-top: 50px;
+    color: #524d4d;
+}
+
+.guest-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.guest-content .content{
+    margin: 70px;
+}
+
+.guest-content .content img{
+    height: 200px;
+    border-radius: 50%;
+}
+
+.guest-content .content h3{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.content div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.started{
+    background: url("../Pictures/startedbg.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.white-cover h1{
+    background: #ece3c5;
+    width: 102%;
+    position: absolute;
+    top: 402%;
+    left: 49%;
+    translate: -50% -50%;
+}
+
+.started-content{
+    padding: 50px;
+}
+
+.started-content button{
+    width: 350px;
+    height: 50px;
+}
+
+.logos{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.logos img{
+    height: 50px;
+    width: 50px;
+}
+
+.logos img, .logos svg{
+    margin: 10px;
+}
+
+.started-info{
+    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.started-info h2{
+    display: flex;
+    justify-content: center;
+}
+
+.started-info div{
+    display: flex;
+    justify-content: center;
+}
+
+.started-info img{
+    border-radius: 50%;
+}
+
+.faq{
+    width: 100%;
+    background: #ece3c5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+    color: #524d4d;
+}
+
+.faq h1{
+    padding-top: 20px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #524d4d;
+}
+
+.faq h2{
+    font-size: 35px;
+}
+
+.first-challenge{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.first-challenge div{
+    padding: 20px;
+    background: #e77e7e3b;
+    width: 350px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.first-challenge div h3{
+    display: flex;
+    justify-content: center;
+}
+
+.second-challenge{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.second-challenge div{
+    padding: 20px;
+    background: #e77e7e3b;
+    width: 350px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.second-challenge div h3{
+    display: flex;
+    justify-content: center;
+}
+
+.first-submission{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.first-submission div{
+    padding: 20px;
+    background: #e77e7e3b;
+    width: 350px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.first-submission div h3, .second-submission div h3{
+    display: flex;
+    justify-content: center;
+}
+
+.second-submission div{
+    padding: 20px;
+    background: #e77e7e3b;
+    width: 350px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.tools{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tools div{
+    padding: 20px;
+    background: #e77e7e3b;
+    width: 350px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.tools div h3{
+    display: flex;
+    justify-content: center;
+}
+
+.second-challenge div h3{
+    display: flex;
+    justify-content: center;
+}
+
+.first-general{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.first-general div{
+    padding: 20px;
+    background: #e77e7e3b;
+    width: 350px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.second-general{
+    display: flex;
+    flex-direction: row;
+}
+
+.second-general div{
+    padding: 20px;
+    background: #e77e7e3b;
+    width: 350px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.first-general div h3, .second-general div h3{
+    display: flex;
+    justify-content: center;
+}
+
+.job{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+    color: #524d4d;
+}
+
+.job h1{
+    color: #524d4d;
+}
+
+.job-hiring{
+    display: flex;
+    flex-direction: row;
+}
+
+.job-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.job-profile img{
+    border-radius: 50%;
+}
+
+.job-profile h2, .job-profile img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.job-info div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-info p{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.job-info{
+    background: #fff;
+    width: 250px;
+    height: 250px;
+    padding: 10px; 
+    border-radius: 6px;
+    position: relative;
+    left: 50%;
+    translate: -50%;
+}
+
+.job-cover .job-info div{
+    display: flex;
+    justify-content: center;
+}
+
+.job-cover{
+    background: rgb(231, 133, 133);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    animation: scrollup .5s ease-in-out;
+}
+
+.job-cover2{
+    background: rgb(231, 208, 133);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    animation: scrollup .5s ease-in-out;
+}
+
+.job-cover3{
+    background: rgb(231, 180, 133);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    animation: scrollup .5s ease-in-out;
+}
+
+.job-cover4{
+    background: rgb(229, 231, 133);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    animation: scrollup .5s ease-in-out;
+}
+
+.job-cover5{
+    background: rgb(210, 231, 133);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    animation: scrollup .5s ease-in-out;
+}
+
+.job-cover6{
+    background: rgb(164, 231, 133);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    animation: scrollup .5s ease-in-out;
+}
+
+.salary{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.salary div{
+    display: flex;
+    flex-direction: column;
+}
+
+.salary button, .salary div{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.profile{
+    background: #cacacafd;
+    width: fit-content;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 50px;
+    animation: scrollup .5s ease-in-out
+}
+
+.profile-container{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.profile-info svg{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+}
+
+.profile-container .count{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.count p{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.profile-container .exit-signout{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.exit-signout a{
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 1px #000;
+    border-radius: 10px;
+    font-family: "Odor Mean Chey", serif;;
+    font-style: normal;
+}
+
+.exit-signout a:active{
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    box-shadow: inset 2px 2px 2px 1px #000;
+    border-radius: 10px;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+}
+
+.profile li{
+    list-style: none;
+}
+
+.add a{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.exit a{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.post{
+    background: #fff;
+    width: fit-content;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: "Odor Mean Chey", serif;
+    font-style: normal;
+    z-index: 1;
+}
+
+.post div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.post .create, .post .upload{
+    margin: 5px;
+}
+
+.post .create svg, .post .create p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.post .upload svg, .post .upload p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.post li{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    list-style: none;
+}
